@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>App Landing Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: white;
-      text-align: center;
-    }
-
-    .logo {
-      max-width: 300px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* --- botão como inline-block para aceitar width --- */
-    .store-btn {
-      display: inline-block; /* aceita width e se comporta bem dentro do flex */
-      text-decoration: none;
-      width: 300px; /* largura fixa no desktop (mude se quiser) */
-      max-width: 100%;
-    }
-
-    /* imagem ocupa 100% do container do botão */
-    .store-btn img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    @media (min-width: 601px) {
-      .store-btn.android {
-        margin-left: 20px;
-      }
-      .store-btn.ios {
-        margin-top: 6px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .buttons {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Landing Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: white;
+        text-align: center;
+      }
+
+      .logo {
+        max-width: 300px;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
       }
 
       .store-btn {
-        display: block; 
-        width: 60%;
-        max-width: 320px;
+        display: inline-block; /* aceita width e se comporta bem dentro do flex */
+        text-decoration: none;
+        width: 300px; /* largura fixa no desktop (mude se quiser) */
+        max-width: 100%;
       }
-    }
-  </style>
-</head>
-<body>
-  <img src="logo.png" alt="Logo do App" class="logo" />
 
-  <div class="buttons">
-    <a class="store-btn ios" href="#">
-      <img src="appstore.svg" alt="Download na App Store" />
-    </a>
-    <a class="store-btn android" href="#">
-      <img src="googleplay.png" alt="Download no Google Play" />
-    </a>
-  </div>
-</body>
+      /* imagem ocupa 100% do container do botão */
+      .store-btn img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @media (min-width: 601px) {
+        .store-btn.android {
+          margin-left: 20px;
+        }
+        .store-btn.ios {
+          margin-top: 6px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .buttons {
+          flex-direction: column;
+        }
+
+        .store-btn {
+          display: block;
+          width: 60%;
+          max-width: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="logo.png" alt="Logo do App" class="logo" />
+
+    <div class="buttons">
+      <a class="store-btn ios" href="#">
+        <img src="appstore.svg" alt="Download na App Store" />
+      </a>
+      <a
+        class="store-btn android"
+        href="https://play.google.com/store/apps/details?id=com.ad.agronomica"
+      >
+        <img src="googleplay.png" alt="Download no Google Play" />
+      </a>
+    </div>
+  </body>
 </html>
